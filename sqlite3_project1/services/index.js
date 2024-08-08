@@ -21,7 +21,7 @@ const updateServiceGame = (req, res) => {
 
 }
 const deleteServiceGame = (req, res) => {
-    updateDbGame(req, res);
+    deleteDbGame(req, res);
 
 }
 export { getServiceGames, getServiceGamesById, createServiceGame, updateServiceGame, deleteServiceGame }

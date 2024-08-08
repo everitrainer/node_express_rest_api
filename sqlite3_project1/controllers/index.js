@@ -21,7 +21,7 @@ const updateGame = (req, res) => {
 
 
 const deleteGame = (req, res) => {
-    updateServiceGame(req, res);
+    deleteServiceGame(req, res);
 }
 
 
