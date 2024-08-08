@@ -12,11 +12,5 @@ router.get('/games/:id', getGamesById);
 // Add a new game
 router.post('/games', createGame);
 
-// async (req, res) => {
-//     const db = await dbPromise();
-//     const games = await db.all('SELECT * FROM games');
-//     res.json(games);
-// });
-
 
 export default router;
