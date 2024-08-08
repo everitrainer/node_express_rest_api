@@ -7,7 +7,6 @@ const getGames = (req, res) => {
 const getGamesById = (req, res) => {
     getServiceGamesById(req, res);
 
-
 }
 
 

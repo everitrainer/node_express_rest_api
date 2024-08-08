@@ -6,7 +6,7 @@ const router = express.Router();
 // Get all games
 router.get('/games', getGames);
 // Get a specific game by ID
-app.get('/games/:id', getGamesById);
+router.get('/games/:id', getGamesById);
 
 
 

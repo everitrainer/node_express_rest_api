@@ -1,7 +1,7 @@
-import openDb from "../config/database.js";
+import dbPromise from "../config/database.js";
 
 const getDbGames = async (req, res) => {
-    const db = await openDb();
+    const db = await dbPromise();
     const games = await db.all('SELECT * FROM games');
     res.json({ games });
 }
