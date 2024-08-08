@@ -23,4 +23,11 @@ const createDbGame = async (req, res) => {
     res.status(201).json({ name, genre, id: result.lastID });
 }
 
-export { getDbGames, getDbGameById, createDbGame }
+const updateDbGame = async (req, res) => {
+    const { name, genre } = req.body;
+    const db = await dbPromise();
+    await db.run('UPDATE games SET name = ?, genre = ? WHERE id = ?', [name, genre, req.params.id]);
+    res.status(200).send('Game updated');
+}
+
+export { getDbGames, getDbGameById, createDbGame, updateDbGame }

@@ -1,4 +1,4 @@
-import { getDbGames, getDbGameById, createDbGame } from "../database/index.js"
+import { getDbGames, getDbGameById, createDbGame, updateDbGame } from "../database/index.js"
 
 const getServiceGames = (req, res) => {
     getDbGames(req, res);
@@ -16,4 +16,8 @@ const createServiceGame = (req, res) => {
     createDbGame(req, res);
 
 }
-export { getServiceGames, getServiceGamesById, createServiceGame }
+const updateServiceGame = (req, res) => {
+    updateDbGame(req, res);
+
+}
+export { getServiceGames, getServiceGamesById, createServiceGame, updateServiceGame }

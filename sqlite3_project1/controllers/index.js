@@ -1,4 +1,4 @@
-import { getServiceGames, getServiceGamesById, createServiceGame } from "../services/index.js"
+import { getServiceGames, getServiceGamesById, createServiceGame, updateServiceGame } from "../services/index.js"
 
 const getGames = (req, res) => {
     getServiceGames(req, res);
@@ -14,5 +14,11 @@ const createGame = (req, res) => {
 
 }
 
+const updateGame = (req, res) => {
+    updateServiceGame(req, res);
+}
 
-export { getGames, getGamesById, createGame }
+
+
+
+export { getGames, getGamesById, createGame, updateGame }
