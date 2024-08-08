@@ -29,5 +29,10 @@ const updateDbGame = async (req, res) => {
     await db.run('UPDATE games SET name = ?, genre = ? WHERE id = ?', [name, genre, req.params.id]);
     res.status(200).send('Game updated');
 }
+const deleteDbGame = async (req, res) => {
+    const db = await dbPromise();
+    await db.run('DELETE FROM games WHERE id = ?', [req.params.id]);
+    res.status(200).send('Game deleted');
+}
 
-export { getDbGames, getDbGameById, createDbGame, updateDbGame }
+export { getDbGames, getDbGameById, createDbGame, updateDbGame, deleteDbGame }
