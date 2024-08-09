@@ -3,7 +3,7 @@ import gameModel from './game.js';
 
 const sequelize = new Sequelize({
     dialect: 'sqlite',
-    storage: './mydatabase.db'
+    storage: './database_setup/mydatabase.db'
 });
 
 const db = {};
