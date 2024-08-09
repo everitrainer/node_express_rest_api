@@ -1,4 +1,4 @@
-export default (sequelize, DataTypes) => {
+const GameModel = (sequelize, DataTypes) => {
     const Game = sequelize.define('Games', {
         name: {
             type: DataTypes.STRING,
@@ -12,3 +12,7 @@ export default (sequelize, DataTypes) => {
 
     return Game;
 };
+
+
+export default GameModel;
+
